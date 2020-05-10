@@ -1,0 +1,24 @@
+.header {
+    padding: 1rem;
+    display: flex;
+    background-color: aquamarine;
+
+    &-title {
+        flex: 1 1 auto;
+    }
+
+    nav {
+        ul {
+            display: flex;
+            justify-content: flex-end;
+
+            li {
+                
+            }
+
+            :not(:first-child) {
+                margin-left: 1.5rem;
+            }
+        }
+    }
+}
