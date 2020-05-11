@@ -3,7 +3,7 @@ import './Header.scss';
 
 function Header(props) {
 
-    const { sections } = props;
+    const { sections, currentPage, setCurrentPage } = props;
 
     return (
         <header className="header">
@@ -14,7 +14,7 @@ function Header(props) {
                         sections.map((section) => {
                             return (
                                 <li>
-                                    <a href="#" onClick={() => props.setCurrentPage(section.index)}>{section.name}</a>
+                                    <a className={currentPage === section.index ? 'active' : ''} href="#" onClick={() => setCurrentPage(section.index)}>{section.name}</a>
                                 </li>
                             )
                         })

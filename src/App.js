@@ -4,6 +4,7 @@ import { hot } from "react-hot-loader";
 import Header from './components/header/Header';
 import Section from './components/section/Section';
 import Footer from './components/footer/Footer';
+import Pager from './components/pager/Pager';
 import Banner from './components/sections/Banner';
 import Projects from './components/sections/Projects';
 import WorkExperience from './components/sections/WorkExperience';
@@ -14,7 +15,7 @@ import "./assets/styles/appStyles.scss";
 
 function App() {
     const sections = [
-        { index: 0, name: "home", content: <Banner />, color: 'bisque' },
+        { index: 0, name: "intro", content: <Banner />, color: 'bisque' },
         { index: 1, name: "projects", content: <Projects />, color: 'lightblue' },
         { index: 2, name: "work", content: <WorkExperience />, color: 'lightcoral' },
         { index: 3, name: "about me", content: <About />, color: 'teal' },
@@ -29,8 +30,8 @@ function App() {
 
     return (
         <div className="App">
-            <Header sections={sections} setCurrentPage={changePage} />
-            <h1>{`current page: ${currentPage}`}</h1>
+            <Header sections={sections} currentPage={currentPage} setCurrentPage={changePage} />
+            {/* <Pager currentPage={currentPage} pages={sections}></Pager> */}
             <div className="sections-container" style={{ transform: `translateX(calc(-100vw * ${currentPage}))` }}>
                 {
                     sections.map(section => {
@@ -42,6 +43,7 @@ function App() {
                     })
                 }
             </div>
+            {/* <Footer /> */}
         </div>
     )
 }

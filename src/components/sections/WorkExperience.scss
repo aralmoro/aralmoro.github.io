@@ -1,0 +1,15 @@
+.work {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex: 1 1 auto;
+
+    ul {
+        li:not(:last-child) {
+            margin-bottom: 2rem;
+        } 
+
+        .logo {
+            max-width: 120px;
+        }
+    }
+}

@@ -1,7 +1,12 @@
+@import '../../assets/styles/media';
+@import '../../assets/styles/themeColors';
+@import '../../assets/styles/dimensions';
+
 .header {
     padding: 1rem;
     display: flex;
-    background-color: aquamarine;
+    background-color: $header-bg;
+    height: $header-height;
 
     &-title {
         flex: 1 1 auto;
@@ -13,7 +18,10 @@
             justify-content: flex-end;
 
             li {
-                
+
+                .active {
+                    text-decoration: none;
+                }
             }
 
             :not(:first-child) {
@@ -21,4 +29,10 @@
             }
         }
     }
+
+    @include phone {
+        flex-direction: column;
+        align-items: center;
+    }
+
 }

@@ -1,0 +1,63 @@
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20rem);
+    }
+    80% {
+        transform: translateX(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20rem);
+    }
+    80% {
+        transform: translateX(-1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes wave {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        transform: rotate(-40deg);
+    }
+    80% {
+        transform: rotate(40deg);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.banner {
+    flex: 1 1 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    &-text {
+        margin-top: 10rem;
+
+        h1 {
+            font-size: 4rem;
+            animation: moveInRight 1s ease-out;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            animation: moveInLeft 1s ease-out;
+        }
+
+    }
+}

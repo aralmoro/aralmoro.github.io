@@ -1,12 +1,11 @@
 @import './reset.css';
 @import 'themeColors';
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
-
-$work-sans: 'Work Sans', sans-serif;
+@import 'fonts';
 
 body {
   font-family: $work-sans;
   overflow: hidden;
+  background: url('http://api.thumbr.it/whitenoise-361x370.png?background=fafafaff&noise=626262&density=1&opacity=37')
 }
 
 .App {

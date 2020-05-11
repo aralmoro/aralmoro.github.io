@@ -1,6 +1,11 @@
+@import '../../assets/styles/media';
+@import '../../assets/styles/themeColors';
+@import '../../assets/styles/fonts';
+@import '../../assets/styles/dimensions';
+
 .section {
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - #{$header-height});
     display: flex;
     flex-wrap: nowrap;
 
@@ -8,7 +13,14 @@
         writing-mode: vertical-lr;
         transform: rotate(180deg);
         text-align: center;
-        font-size: 80px;
-        margin-left: 50px;
+        font-size: 5rem;
+        color: $font-gray;
+        font-family: $montserrat;
+        margin-left: 5rem;
+        margin-right: 5rem;
+
+        @include phone {
+            display: none;
+        }
     }
 }
