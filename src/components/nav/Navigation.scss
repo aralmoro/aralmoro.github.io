@@ -1,0 +1,115 @@
+@import '../../assets/styles/themeColors';
+
+
+.navigation {
+    z-index: 50;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .background {
+        position: absolute;
+        right: -70vmax;
+        top: -20vmax;
+        width: 200vmax;
+        height: 180vmax;
+        border-radius: 38% 62% 50% 50% / 34% 60% 40% 66%;
+        transform: scale(0);
+        transform-origin: 130vmax 20vmax;
+        background-color: $nav-bg;
+        transition: all 0.5s ease-in-out 0s;
+    }
+
+    &-active {
+        .navigation-container {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .background {
+            transform: scale(1);
+        }
+    }
+
+    &-container {
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: all 0.5s ease-in-out 0s;
+
+        .navigation-content {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            padding: 1rem;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+
+            .close-btn-container {
+                position: relative;
+                height: 100px;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .navigation-list {
+                text-align: center;
+                margin-top: 100px;
+    
+                li {
+                    line-height: 4rem;
+                    
+                    a {
+                        color: $nav-text-color;
+                        text-decoration: none;
+                        font-size: 40px;
+                        position: relative;
+                        z-index: 55;
+    
+                        &:hover:after {
+                            content: "";
+                            z-index: 52;
+                            overflow: hidden;
+                            background-color: $nav-underline-color;
+                            height: 10px;
+                            width: 110%;
+                            border-radius: 10px;
+                            z-index: -1;
+                            display: block;
+                            position: absolute;
+                            bottom: 3px;
+                            left: -5%;
+                        }
+                    }
+    
+                    a.active {
+                        &:after {
+                            content: "";
+                            z-index: 52;
+                            overflow: hidden;
+                            background-color: $nav-underline-color;
+                            height: 10px;
+                            width: 110%;
+                            border-radius: 10px;
+                            z-index: -1;
+                            display: block;
+                            position: absolute;
+                            bottom: 3px;
+                            left: -5%;
+                        }
+                    }
+                }
+            }
+        }
+
+        
+    }
+}

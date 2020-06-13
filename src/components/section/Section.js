@@ -7,7 +7,7 @@ function Section(props) {
 
     return (
         <section className="section">
-            <span className="section-title">{name}</span>
+            <span className="section-title">{name === "home" ? '' : name}</span>
             {children}
         </section >
 

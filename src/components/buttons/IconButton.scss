@@ -1,0 +1,29 @@
+.icon-button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    z-index: 0;
+}
+
+.icon-img {
+    width: 40px;
+    height: 40px;
+    top: 0px;
+    left: 0px;
+}
+
+.shadow {
+    position: absolute;
+    z-index: -1;
+    top: 3px;
+    left: 8px;
+    filter: invert(74%) sepia(61%) saturate(259%) hue-rotate(288deg) brightness(104%) contrast(92%);
+}
+
+.shadow-invert {
+    position: absolute;
+    z-index: -1;
+    top: 3px;
+    left: 8px;
+    filter: invert(100%) sepia(0%) saturate(7489%) hue-rotate(356deg) brightness(101%) contrast(105%);
+}

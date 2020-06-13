@@ -1,14 +1,22 @@
 import React from 'react';
+import IconButton from '../buttons/IconButton';
+
 import './Header.scss';
+import MenuIcon from '../../assets/icons/arrows_hamburger.svg';
 
 function Header(props) {
 
-    const { sections, currentPage, setCurrentPage } = props;
+    const { toggleNav, sections, currentPage, setCurrentPage } = props;
+
+    const handleClickMenu = () => {
+        toggleNav();
+    }
 
     return (
         <header className="header">
-            <div className="header-title">logo hir</div>
-            <nav>
+            <div className="header-title">Angela Almoro</div>
+            <IconButton className="header-btn" icon={MenuIcon} onClick={handleClickMenu} />
+            {/* <nav>
                 <ul>
                     {
                         sections.map((section) => {
@@ -20,7 +28,7 @@ function Header(props) {
                         })
                     }
                 </ul>
-            </nav>
+            </nav> */}
         </header>
     )
 }

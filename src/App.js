@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { hot } from "react-hot-loader";
 
 import Header from './components/header/Header';
+import Navigation from './components/nav/Navigation';
 import Section from './components/section/Section';
 import Footer from './components/footer/Footer';
 import Pager from './components/pager/Pager';
@@ -15,7 +16,7 @@ import "./assets/styles/appStyles.scss";
 
 function App() {
     const sections = [
-        { index: 0, name: "intro", content: <Banner />, color: 'bisque' },
+        { index: 0, name: "home", content: <Banner />, color: 'bisque' },
         { index: 1, name: "projects", content: <Projects />, color: 'lightblue' },
         { index: 2, name: "work", content: <WorkExperience />, color: 'lightcoral' },
         { index: 3, name: "about me", content: <About />, color: 'teal' },
@@ -23,14 +24,20 @@ function App() {
     ];
 
     const [currentPage, setCurrentPage] = useState(0);
+    const [isNavActive, setNavActive] = useState(false);
 
     const changePage = (index) => {
         setCurrentPage(index);
     }
 
+    const toggleNav = () => {
+        setNavActive(!isNavActive);
+    }
+
     return (
         <div className="App">
-            <Header sections={sections} currentPage={currentPage} setCurrentPage={changePage} />
+            <Header toggleNav={toggleNav} sections={sections} currentPage={currentPage} setCurrentPage={changePage} />
+            <Navigation toggleNav={toggleNav} active={isNavActive} sections={sections} currentPage={currentPage} setCurrentPage={changePage} />
             {/* <Pager currentPage={currentPage} pages={sections}></Pager> */}
             <div className="sections-container" style={{ transform: `translateX(calc(-100vw * ${currentPage}))` }}>
                 {

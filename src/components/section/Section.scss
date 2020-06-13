@@ -13,14 +13,20 @@
         writing-mode: vertical-lr;
         transform: rotate(180deg);
         text-align: center;
-        font-size: 5rem;
-        color: $font-gray;
-        font-family: $montserrat;
+        font-size: 4.5rem;
+        // color: $font-gray;
+        // font-family: $montserrat;
         margin-left: 5rem;
         margin-right: 5rem;
+        position: relative;
+        text-shadow: -3px 5px $section-title-shadow;
 
         @include phone {
             display: none;
         }
     }
+
+
+
+
 }

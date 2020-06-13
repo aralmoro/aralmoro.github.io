@@ -5,14 +5,19 @@
 body {
   font-family: $work-sans;
   overflow: hidden;
-  background: url('http://api.thumbr.it/whitenoise-361x370.png?background=fafafaff&noise=626262&density=1&opacity=37')
 }
 
 .App {
+  position: relative;
     .sections-container {
         position: absolute;
         display: flex;
         flex-wrap: nowrap;
-        transition: transform 1s cubic-bezier(.18,0,.13,.97);
+        // transition: transform 1s cubic-bezier(.18,0,.13,.97);
     }
+}
+
+button {
+  background: transparent;
+  border: 0;
 }
