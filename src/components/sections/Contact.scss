@@ -1,4 +1,17 @@
 .contact {
     padding-left: 1rem;
     padding-right: 1rem;
+
+    ul {
+        li {
+            margin-bottom: 10px;
+            :first-child {
+                margin-right: 20px;
+            }
+
+            :last-child {
+                vertical-align: bottom;
+            }
+        }
+    }
 }

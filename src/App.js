@@ -17,7 +17,7 @@ import "./assets/styles/appStyles.scss";
 function App() {
     const sections = [
         { index: 0, name: "home", content: <Banner />, color: 'bisque' },
-        { index: 1, name: "projects", content: <Projects />, color: 'lightblue' },
+        { index: 1, name: "skills", content: <Projects />, color: 'lightblue' },
         { index: 2, name: "work", content: <WorkExperience />, color: 'lightcoral' },
         { index: 3, name: "about me", content: <About />, color: 'teal' },
         { index: 4, name: "contact me", content: <Contact />, color: 'palegreen' }
@@ -39,11 +39,11 @@ function App() {
             <Header toggleNav={toggleNav} sections={sections} currentPage={currentPage} setCurrentPage={changePage} />
             <Navigation toggleNav={toggleNav} active={isNavActive} sections={sections} currentPage={currentPage} setCurrentPage={changePage} />
             {/* <Pager currentPage={currentPage} pages={sections}></Pager> */}
-            <div className="sections-container" style={{ transform: `translateX(calc(-100vw * ${currentPage}))` }}>
+            <div className="sections-container">
                 {
-                    sections.map(section => {
+                    sections.map((section, index) => {
                         return (
-                            <Section name={section.name} color={section.color}>
+                            <Section name={section.name} color={section.color} isActive={currentPage === index}>
                                 {section.content}
                             </Section>
                         );

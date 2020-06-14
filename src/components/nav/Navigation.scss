@@ -67,45 +67,43 @@
                 li {
                     line-height: 4rem;
                     
-                    a {
-                        color: $nav-text-color;
-                        text-decoration: none;
-                        font-size: 40px;
-                        position: relative;
-                        z-index: 55;
+                    // a {
+                    //     color: $nav-text-color;
+                    //     text-decoration: none;
+                    //     font-size: 40px;
+                    //     position: relative;
+                    //     z-index: 0;
     
-                        &:hover:after {
-                            content: "";
-                            z-index: 52;
-                            overflow: hidden;
-                            background-color: $nav-underline-color;
-                            height: 10px;
-                            width: 110%;
-                            border-radius: 10px;
-                            z-index: -1;
-                            display: block;
-                            position: absolute;
-                            bottom: 3px;
-                            left: -5%;
-                        }
-                    }
+                    //     &:hover:after {
+                    //         content: "";
+                    //         overflow: hidden;
+                    //         background-color: $nav-underline-color;
+                    //         height: 10px;
+                    //         width: 110%;
+                    //         border-radius: 10px;
+                    //         z-index: -1;
+                    //         display: block;
+                    //         position: absolute;
+                    //         bottom: 3px;
+                    //         left: -5%;
+                    //     }
+                    // }
     
-                    a.active {
-                        &:after {
-                            content: "";
-                            z-index: 52;
-                            overflow: hidden;
-                            background-color: $nav-underline-color;
-                            height: 10px;
-                            width: 110%;
-                            border-radius: 10px;
-                            z-index: -1;
-                            display: block;
-                            position: absolute;
-                            bottom: 3px;
-                            left: -5%;
-                        }
-                    }
+                    // a.active {
+                    //     &:after {
+                    //         content: "";
+                    //         overflow: hidden;
+                    //         background-color: $nav-underline-color;
+                    //         height: 10px;
+                    //         width: 110%;
+                    //         border-radius: 10px;
+                    //         z-index: -1;
+                    //         display: block;
+                    //         position: absolute;
+                    //         bottom: 3px;
+                    //         left: -5%;
+                    //     }
+                    // }
                 }
             }
         }

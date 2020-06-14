@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navigation.scss';
+import Link from '../link/Link';
 import IconButton from '../buttons/IconButton';
 import CloseIcon from '../../assets/icons/arrows_circle_remove.svg';
 
@@ -21,14 +22,14 @@ function Navigation(props) {
             <nav className="navigation-container">
                 <div className="navigation-content">
                     <div className="close-btn-container">
-                        <IconButton icon={CloseIcon} onClick={handleClose} invert />
+                        <IconButton icon={CloseIcon} onClick={handleClose} invert size={40} />
                     </div>
                     <ul className="navigation-list">
                         {
                             sections.map((section) => {
                                 return (
                                     <li>
-                                        <a className={currentPage === section.index ? 'active' : ''} href="#" onClick={() => handleClickNav(section.index)}>{section.name}</a>
+                                        <Link active={currentPage === section.index} title={section.name} onClick={() => handleClickNav(section.index)} fontSize={40} />
                                     </li>
                                 )
                             })

@@ -1,3 +1,5 @@
+@import '../../assets/styles/themeColors.scss';
+
 @keyframes moveInLeft {
     0% {
         opacity: 0;
@@ -27,17 +29,20 @@
 }
 
 @keyframes wave {
-    0% {
+    0% { 
         opacity: 0;
+        transform: rotate(  0.0deg) 
     }
-    50% {
-        transform: rotate(-40deg);
-    }
-    80% {
-        transform: rotate(40deg);
-    }
-    100% {
-        opacity: 1;
+   10% { 
+       opacity: 1;
+       transform: rotate(-10.0deg) }
+   20% { transform: rotate( 12.0deg) }
+   30% { transform: rotate(-10.0deg) }
+   40% { transform: rotate(  9.0deg) }
+   50% { transform: rotate(  0.0deg) }
+  100% { 
+      opacity: 1;
+      transform: rotate(  0.0deg) 
     }
 }
 
@@ -54,10 +59,31 @@
             animation: moveInRight 1s ease-out;
         }
 
-        h2 {
-            font-size: 2.5rem;
-            animation: moveInLeft 1s ease-out;
+        h1:last-of-type {
+            margin-bottom: 15px;
         }
 
+        h2 {
+            opacity: 0;
+            transform: translateX(-20rem);
+            font-size: 1.7rem;
+            color: $font-dark-gray;
+            animation: moveInLeft 1s ease-out 1s;
+            animation-fill-mode: forwards;
+        }
+
+    }
+
+    &-icon {
+        width: 3rem;
+        height: 3rem;
+        opacity: 0;
+        vertical-align: inherit;
+        animation-name: wave;
+        animation-duration: 2s;
+        animation-delay: 2.5s;
+        animation-fill-mode: forwards;
+        // animation-iteration-count: infinite;
+        transform-origin: 70% 70%;
     }
 }

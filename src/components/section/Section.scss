@@ -6,8 +6,12 @@
 .section {
     width: 100vw;
     height: calc(100vh - #{$header-height});
-    display: flex;
-    flex-wrap: nowrap;
+    display: none;
+
+    &-active {
+        display: flex;
+        flex-wrap: nowrap;
+    }
 
     &-title {
         writing-mode: vertical-lr;
@@ -19,7 +23,7 @@
         margin-left: 5rem;
         margin-right: 5rem;
         position: relative;
-        text-shadow: -3px 5px $section-title-shadow;
+        text-shadow: -3px 2px $section-title-shadow;
 
         @include phone {
             display: none;

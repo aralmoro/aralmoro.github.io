@@ -1,7 +1,5 @@
 .icon-button {
     position: relative;
-    width: 40px;
-    height: 40px;
     z-index: 0;
     &:hover {
         transform: scale(1.15);
@@ -9,8 +7,6 @@
 }
 
 .icon-img {
-    width: 40px;
-    height: 40px;
     top: 0px;
     left: 0px;
 }
