@@ -20,6 +20,22 @@
     display: flex;
     flex-direction: row;
 
+    &-overlay {
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 200px;
+            height: 200px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            background-color: rgba(218,248,255,0.7);
+        }
+    }
+
     &-photo {
         opacity: 0;
         width: 200px;
@@ -28,6 +44,10 @@
         margin-bottom: 20px;
         animation: moveInTop 0.8s ease-out;
         animation-fill-mode: forwards;
+
+        &:hover {
+
+        }
     }
 
     &-description {

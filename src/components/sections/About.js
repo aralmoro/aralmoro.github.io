@@ -5,7 +5,9 @@ import './About.scss';
 function About() {
     return (
         <div className="about">
-            <img className="about-photo" src={aboutPhoto} alt="my photo" />
+            <div className="about-overlay">
+                <img className="about-photo" src={aboutPhoto} alt="my photo" />
+            </div>
             <div className="about-description">
                 <p>{`I'm Angela Roscel Almoro, a software engineer with 5 years of experience in the industry. I studied BS Computer Science in University of the Philippines Los Baños and graduated Cum Laude.`}</p>
                 <br />
