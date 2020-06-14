@@ -8,17 +8,19 @@ import './Contact.scss';
 function Contact() {
     return (
         <div className="contact">
-            <h3>Let's get in touch! You can reach me through:</h3>
-            <ul>
-                <li>
-                    <IconButton icon={MailIcon} disabled size={22} />
-                    <Link title="Email" fontSize={17} />
-                </li>
-                <li>
-                    <IconButton icon={LinkedInIcon} disabled size={22} />
-                    <Link title="LinkedIn" fontSize={17} />
-                </li>
-            </ul>
+            <div>
+                <h3>Let's get in touch! You can reach me through:</h3>
+                <ul>
+                    <li>
+                        <IconButton icon={MailIcon} disabled size={22} />
+                        <Link title="Email" fontSize={17} href="mailto: aralmoro@gmail.com" dark />
+                    </li>
+                    <li>
+                        <IconButton icon={LinkedInIcon} disabled size={22} />
+                        <Link title="LinkedIn" fontSize={17} href="https://www.linkedin.com/in/angela-roscel-almoro-26022287/" dark />
+                    </li>
+                </ul>
+            </div>
         </div>
     )
 }

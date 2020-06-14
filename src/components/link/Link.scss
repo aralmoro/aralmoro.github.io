@@ -38,3 +38,12 @@ a.active {
         left: -5%;
     }
 }
+
+a.dark {
+    &:visited:after {
+        background-color: $link-underline-color;
+    }
+    &:hover:after {
+        background-color: $link-underline-color;
+    }   
+}
