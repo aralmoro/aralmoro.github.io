@@ -17,7 +17,7 @@ import "./assets/styles/appStyles.scss";
 function App() {
     const sections = [
         { index: 0, name: "home", content: <Banner />, color: 'bisque' },
-        { index: 1, name: "skills", content: <Projects />, color: 'lightblue' },
+        { index: 1, name: "projects & skills", content: <Projects />, color: 'lightblue' },
         { index: 2, name: "work", content: <WorkExperience />, color: 'lightcoral' },
         { index: 3, name: "about me", content: <About />, color: 'teal' },
         { index: 4, name: "contact me", content: <Contact />, color: 'palegreen' }
