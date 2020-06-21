@@ -38,7 +38,8 @@
     justify-content: center;
 
     .work-content {
-        width: 1000px;
+        width: calc(100vw - 50px - 20rem);
+        max-width: 1000px;
 
         ul {
             display: flex;
@@ -158,17 +159,18 @@
         @include phone {
             ul li {
                 &:nth-child(even) {
-                    align-self: center;
+                    align-self: flex-start;
                     margin-right: 0px;
                 }
     
                 &:nth-child(odd) {
-                    align-self: center;
+                    align-self: flex-start;
                     margin-left: 0px;
                 }
     
                 .work-item {
-                    width: 90vw;
+                    width: calc(100vw - 2rem);
+                    max-width: calc(500px - 2rem);
                 }
             }
         }
@@ -176,20 +178,28 @@
         @include tablet {
             ul li {
                 &:nth-child(even) {
-                    align-self: center;
+                    align-self: flex-start;
                     margin-right: 0px;
                 }
     
                 &:nth-child(odd) {
-                    align-self: center;
+                    align-self: start;
                     margin-left: 0px;
                 }
     
                 .work-item {
-                    width: 500px;
+                    width: calc(500px - 2rem);
                 }
             }
         }
 
+        @include phone {
+            width: 100vw;
+            max-width: 500px;
+        }
+
+        @include tablet {
+            width: 500px;
+        }
     }
 }
