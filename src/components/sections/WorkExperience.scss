@@ -33,7 +33,8 @@
     padding-left: 1rem;
     padding-right: 1rem;
     flex: 1 1 auto;
-    // overflow-y: auto;
+    overflow: hidden;
+    overflow-y: auto;
     display: flex;
     justify-content: center;
 
@@ -59,33 +60,33 @@
                 margin-right: 30px;
             }
 
-            // li:nth-child(1) {
-            //     transform: translateX(-20rem);
-            //     opacity: 0;
-            //     animation: moveInLeft 1s ease-out;
-            //     animation-fill-mode: forwards;
-            // }
+            li:nth-child(1) {
+                transform: translateX(-20rem);
+                opacity: 0;
+                animation: moveInLeft 1s ease-out;
+                animation-fill-mode: forwards;
+            }
 
-            // li:nth-child(2) {
-            //     transform: translateX(20rem);
-            //     opacity: 0;
-            //     animation: moveInRight 1s ease-out 0.5s;
-            //     animation-fill-mode: forwards;
-            // }
+            li:nth-child(2) {
+                transform: translateX(20rem);
+                opacity: 0;
+                animation: moveInRight 1s ease-out 0.5s;
+                animation-fill-mode: forwards;
+            }
 
-            // li:nth-child(3) {
-            //     transform: translateX(-20rem);
-            //     opacity: 0;
-            //     animation: moveInLeft 1s ease-out 1s;
-            //     animation-fill-mode: forwards;
-            // }
+            li:nth-child(3) {
+                transform: translateX(-20rem);
+                opacity: 0;
+                animation: moveInLeft 1s ease-out 1s;
+                animation-fill-mode: forwards;
+            }
 
-            // li:nth-child(4) {
-            //     transform: translateX(20rem);
-            //     opacity: 0;
-            //     animation: moveInRight 1s ease-out 1.5s;
-            //     animation-fill-mode: forwards;
-            // }
+            li:nth-child(4) {
+                transform: translateX(20rem);
+                opacity: 0;
+                animation: moveInRight 1s ease-out 1.5s;
+                animation-fill-mode: forwards;
+            }
     
     
             li {
