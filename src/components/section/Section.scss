@@ -21,6 +21,7 @@
     width: 100vw;
     height: calc(100vh - #{$header-height});
     display: none;
+    background-color: transparent;
 
     &-active {
         display: flex;
@@ -46,7 +47,13 @@
         }
     }
 
-
-
+    .canvas-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -10;
+        width: 100vw;
+        height: 100vh;
+    }
 
 }
