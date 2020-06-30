@@ -32,15 +32,15 @@ const p5 = {
         end: { x: 0.8, y: 0.65 }
     },
     start: { x: 1, y: 0 },
-    end: { x: 0.85, y: 0.9 }
+    end: { x: 0.85, y: 0.8 }
 };
 const p6 = {
     c: {
         start: { x: 1, y: 0 },
-        end: { x: 0.86, y: 1 }
+        end: { x: 0.9, y: 0.95 }
     },
     start: { x: 1, y: 0 },
-    end: { x: 1, y: 0.9 }
+    end: { x: 1, y: 1 }
 };
 
 export {

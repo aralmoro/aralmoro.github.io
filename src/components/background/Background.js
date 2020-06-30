@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { p1, p2, p3, p4, p5, p6 } from '../../constants/bg1points';
-import { lerpPoint } from '../../utils/math';
+import { lerpPoint, lerp } from '../../utils/math';
 
 function useWindowSize() {
     const isClient = typeof window === 'object';
@@ -72,6 +72,23 @@ function Background(props) {
         }
     };
 
+    const computeColor = () => {
+        const h1 = 149;
+        const s1 = 96;
+        const l1 = 74;
+
+        const h2 = 197;
+        const s2 = 96;
+        const l2 = 74;
+
+        let t = ((Math.sin(Date.now() / 2000)) + 1) / 2;
+        const h = lerp(h1, h2, t);
+        const s = lerp(s1, s2, t);
+        const l = lerp(l1, l2, t);
+
+        return `hsl(${h},${s}%,${l}%)`;
+    };
+
     const draw = () => {
         const canvas = canvasRef.current;
 
@@ -83,7 +100,7 @@ function Background(props) {
 
             ctx.fillStyle = 'white';
             ctx.fillRect(0, 0, width, height);
-            ctx.fillStyle = '#f7b93b';
+            ctx.fillStyle = computeColor();
 
             const t = getT();
 
@@ -122,10 +139,11 @@ function Background(props) {
             const lerpedP6 = lerpVertex(p6, t);
             const lerpedP6C = lerpVertex(p6.c, t);
             ctx.quadraticCurveTo(
-                width * (lerpedP6C.x + (Math.sin(Date.now() / 1000) * 0.01)),
-                height * (lerpedP6C.y + (Math.cos(Date.now() / 1500) * 0.01)),
+                width * (lerpedP6C.x - (Math.sin(Date.now() / 1200) * 0.04)),
+                height * lerpedP6C.y,
                 width * lerpedP6.x,
-                height * lerpedP6.y);
+                height * lerpedP6.y
+            );
             ctx.fill();
         }
     };
