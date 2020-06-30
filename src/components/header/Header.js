@@ -15,7 +15,7 @@ function Header(props) {
     return (
         <header className="header">
             <div className="header-title">{'<3'}</div>
-            <IconButton className="header-btn" icon={MenuIcon} onClick={handleClickMenu} size={40} />
+            <IconButton className="header-btn" icon={MenuIcon} onClick={handleClickMenu} invert size={40} />
             {/* <nav>
                 <ul>
                     {

@@ -4,12 +4,12 @@ import "./Section.scss";
 
 function Section(props) {
 
-    const { name, children, color, isActive } = props;
+    const { name, children, color1, color2, isActive } = props;
 
     return (
         <section className={isActive ? "section section-active" : "section"}>
             <div className="canvas-container">
-                <Background />
+                <Background color1={color1} color2={color2} />
             </div>
             <span className="section-title">{name === "home" ? '' : name}</span>
             {children}

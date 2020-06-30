@@ -8,7 +8,7 @@ import './Contact.scss';
 function Contact() {
     return (
         <div className="contact">
-            <div>
+            <div className="contact-content">
                 <h3>Let's get in touch! You can reach me through:</h3>
                 <ul>
                     <li>

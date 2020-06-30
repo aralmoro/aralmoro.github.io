@@ -34,8 +34,12 @@ function Background(props) {
     const canvasRef = useRef(null);
     const size = useWindowSize();
     let startTime;
+    let color1;
+    let color2;
 
     useEffect(() => {
+        color1 = props.color1;
+        color2 = props.color2;
         startTime = Date.now();
         animate();
     }, []);
@@ -68,20 +72,20 @@ function Background(props) {
         if (t < 1) {
             window.requestAnimationFrame(animate);
         } else {
-            setTimeout(animate, 100);
+            setTimeout(animate, 33);
         }
     };
 
     const computeColor = () => {
-        const h1 = 149;
+        const h1 = color1;
         const s1 = 96;
         const l1 = 74;
 
-        const h2 = 197;
+        const h2 = color2;
         const s2 = 96;
         const l2 = 74;
 
-        let t = ((Math.sin(Date.now() / 2000)) + 1) / 2;
+        let t = ((Math.sin(Date.now() / 1500)) + 1) / 2;
         const h = lerp(h1, h2, t);
         const s = lerp(s1, s2, t);
         const l = lerp(l1, l2, t);

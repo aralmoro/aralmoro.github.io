@@ -16,11 +16,11 @@ import "./assets/styles/appStyles.scss";
 
 function App() {
     const sections = [
-        { index: 0, name: "home", content: <Banner />, color: 'bisque' },
-        { index: 1, name: "projects & skills", content: <Projects />, color: 'lightblue' },
-        { index: 2, name: "work", content: <WorkExperience />, color: 'lightcoral' },
-        { index: 3, name: "about me", content: <About />, color: 'teal' },
-        { index: 4, name: "contact me", content: <Contact />, color: 'palegreen' }
+        { index: 0, name: "home", content: <Banner />, color1: 149, color2: 197 },
+        { index: 1, name: "projects & skills", content: <Projects />, color1: 325, color2: 358 },
+        { index: 2, name: "work", content: <WorkExperience />, color1: 214, color2: 250 },
+        { index: 3, name: "about me", content: <About />, color1: 21, color2: 46 },
+        { index: 4, name: "contact me", content: <Contact />, color1: 101, color2: 140 }
     ];
 
     const [currentPage, setCurrentPage] = useState(0);
@@ -43,7 +43,7 @@ function App() {
                 {
                     sections.map((section, index) => {
                         return (
-                            <Section name={section.name} color={section.color} isActive={currentPage === index}>
+                            <Section name={section.name} color1={section.color1} color2={section.color2} isActive={currentPage === index}>
                                 {section.content}
                             </Section>
                         );
