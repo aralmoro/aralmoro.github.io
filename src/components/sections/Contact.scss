@@ -16,15 +16,21 @@
     margin-top: 150px;
     padding-left: 1rem;
     padding-right: 1rem;
+    font-size: 1.7rem;
     opacity: 0;
     animation: moveInTop 0.8s ease-out;
     animation-fill-mode: forwards;
 
     &-content {
         // border: 1px solid black;
-        border-radius: 6px;
-        padding: 20px;
-        background-color: #fff8cc;
+        // border-radius: 6px;
+        // padding: 20px;
+        // background-color: #fff8cc;
+
+        .sparkle-emoji {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
 
         ul {
             margin-top: 10px;
