@@ -15,10 +15,13 @@
 }
 
 .about {
-    overflow-y: auto;
     padding: 20px;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
 
     &-main-content {
         display: flex;
@@ -37,6 +40,7 @@
             .about-description {
                 padding-left: 0px;
                 padding-right: 0px;
+                margin-left: 0px;
                 // line-height: 2rem;
                 // margin-top: 50px;
             }
@@ -79,6 +83,7 @@
     &-description {
         opacity: 0;
         padding: 20px;
+        margin-left: 25px;
         line-height: 2rem;
         // margin-top: 50px;
         animation: moveInTop 0.8s ease-out;
@@ -89,25 +94,33 @@
     &-additional-content {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-around;
-        margin-top: 20px;
+        margin-top: 25px;
 
         .about-overlay {
-            width: 150px;
-            height: 150px;
-            margin-bottom: 40px;
+            width: 300px;
+            height: 171px;
+            margin-bottom: 80px;
+            text-align: center;
 
             &:before {
-                width: 150px;
-                height: 150px;
+                width: 300px;
+                height: 171px;
                 margin-bottom: 40px;
             }
         }
 
         .about-photo {
-            width: 150px;
-            height: 150px;
-            margin-bottom: 40px;
+            width: 300px;
+            height: 171px;
+            object-fit: cover;
+            // margin-bottom: 40px;
+
+            &-description {
+                font-size: 0.7rem;
+                display: inline-block;
+            }
 
         }
 
@@ -137,4 +150,9 @@
     }
 
     
+}
+
+.about::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
 }
