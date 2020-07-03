@@ -29,14 +29,14 @@
 }
 
 .work {
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1rem;
     flex: 1 1 auto;
-    overflow: hidden;
-    overflow-y: auto;
     display: flex;
     justify-content: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
 
     .work-content {
         width: calc(100vw - 50px - 20rem);
@@ -48,6 +48,10 @@
     
             li:not(:last-child) {
                 margin-bottom: 3rem;
+            }
+
+            li:last-child {
+                margin-bottom: 5rem;
             }
     
             li:nth-child(odd) {
@@ -85,6 +89,13 @@
                 transform: translateX(20rem);
                 opacity: 0;
                 animation: moveInRight 1s ease-out 1.5s;
+                animation-fill-mode: forwards;
+            }
+
+            li:nth-child(5) {
+                transform: translateX(-20rem);
+                opacity: 0;
+                animation: moveInLeft 1s ease-out 2s;
                 animation-fill-mode: forwards;
             }
     
@@ -203,4 +214,9 @@
             width: 500px;
         }
     }
+}
+
+.work::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
 }
