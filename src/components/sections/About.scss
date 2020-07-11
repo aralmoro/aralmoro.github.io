@@ -95,8 +95,12 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
-        margin-top: 25px;
+        justify-content: center;
+
+        .about-additional-photo {
+            flex: 0 1 auto;
+            margin: 10px;
+        }
 
         .about-overlay {
             width: 300px;

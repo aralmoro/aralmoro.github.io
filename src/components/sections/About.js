@@ -18,23 +18,25 @@ function About() {
                 <div className="about-description">
                     <p>{`I'm Angela Roscel Almoro, a software engineer with 5 years of experience in the industry. I studied BS Computer Science in University of the Philippines Los Baños and graduated Cum Laude.`}</p>
                     <br />
-                    <p>My ultimate career goal is to create something using technology that will leave a significant impact in the world and will make it better. In my free time, I love watching KDramas, fulfilling my duties as Resident Representative in Animal Crossing and travelling in different countries.</p>
+                    <p>My ultimate career goal is to create something using technology that will leave a significant impact in the world and will make it better.</p>
+                    <br />
+                    <p>In my free time, I love watching KDramas, fulfilling my duties as Resident Representative in Animal Crossing and travelling in different countries.</p>
                     <br />
                     <p>Here are some of my favorite travel photos :) </p>
                 </div>
             </div>
             <div className="about-additional-content">
-                <div className="about-overlay first">
+                <div className="about-overlay first about-additional-photo">
                     <img className="about-photo" src={taiwanPhoto} alt="my photo" />
                     <span className="about-photo-description">Zhongshe Flower Market, Taichung, Taiwan</span>
                 </div>
 
-                <div className="about-overlay second">
+                <div className="about-overlay second about-additional-photo">
                     <img className="about-photo" src={koreaPhoto} alt="my photo" />
                     <span className="about-photo-description">Bukchon Hanok Village, Seoul, South Korea</span>
                 </div>
 
-                <div className="about-overlay third">
+                <div className="about-overlay third about-additional-photo">
                     <img className="about-photo" src={cambodiaPhoto} alt="my photo" />
                     <span className="about-photo-description">Angkor Wat, Siem Reap, Cambodia</span>
                 </div>
