@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import aboutPhoto from '../../assets/images/angela.png';
 import acIsland from '../../assets/images/ac-island.png';
 import koreaPhoto from '../../assets/images/korea.png';
@@ -8,7 +8,16 @@ import taiwanPhoto from '../../assets/images/taiwan.png';
 import acLogo from '../../assets/images/animal-crossing-logo.jpg';
 import './About.scss';
 
-function About() {
+function About(props) {
+    const { isActive } = props;
+
+    useEffect(() => {
+        if (isActive) {
+            const aboutDiv = document.getElementsByClassName('about');
+            aboutDiv[0].scrollTo(0, 0);
+        }
+    }, [isActive]);
+
     return (
         <div className="about">
             <div className="about-main-content">

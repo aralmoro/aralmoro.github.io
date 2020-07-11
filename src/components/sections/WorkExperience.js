@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import samsungLogo from '../../assets/images/samsung-logo.png';
 import stratpointLogo from '../../assets/images/stratpoint-logo.png';
@@ -7,7 +7,15 @@ import grommetLogo from '../../assets/images/grommet-logo.png';
 import ceosLogo from '../../assets/images/ceos-logo.png';
 import './WorkExperience.scss';
 
-function WorkExperience() {
+function WorkExperience(props) {
+    const { isActive } = props;
+
+    useEffect(() => {
+        if (isActive) {
+            const workDiv = document.getElementsByClassName('work');
+            workDiv[0].scrollTo(0, 0);
+        }
+    }, [isActive]);
 
     const roleCard = (role) => {
         return (
