@@ -19,7 +19,7 @@
 
 .section {
     width: 100vw;
-    height: calc(100vh - #{$header-height});
+    height: 100vh;
     display: none;
     background-color: transparent;
 
