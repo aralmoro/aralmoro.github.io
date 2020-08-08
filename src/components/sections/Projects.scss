@@ -1,11 +1,156 @@
+@import '../../assets/styles/media';
+
 .project {
-    margin-top: 150px;
+    // margin-top: 150px;
     padding-left: 1rem;
     padding-right: 1rem;
     line-height: 1.4rem;
-    
-    img {
-        width: 100px;
-        height: 100px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+    .intro {
+        margin-top: 150px;
     }
+
+    &-list {
+        margin-top: 60px;
+    }
+
+    &-item {
+        display: flex;
+        margin-bottom: 40px;
+        margin-right: 20px;
+
+        .img-overlay {
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                width: 400px;
+                height: 270px;
+                border-radius: 25px;
+                z-index: -1;
+                background-color: rgba(218,248,255,0.7);
+            }
+        }
+
+        .project-img {
+            width: 400px;
+            height: 271px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        .project-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h2 {
+                font-size: 27px;
+            }
+    
+            .subtitle {
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 0.8rem;
+                color: gray;
+            }
+    
+            .pill {
+                // border: 1px solid red;
+                // color: gray;
+                margin-right: 5px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 0.8rem;
+                background: #fff7bf;
+                border-radius: 4px;
+            }
+    
+        }
+    }
+
+    .list-item:nth-child(odd) {
+        .img-overlay {
+            order: 1;
+            margin-right: 20px;
+        }
+
+        .project-info {
+            order: 2;
+        }
+    }
+
+    .list-item:nth-child(even) {
+        .img-overlay {
+            order: 2;
+            margin-left: 20px;
+        }
+
+        .project-info {
+            order: 1;
+        }
+    }
+
+    @include phone {
+        .intro {
+            margin-top: 100px;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 0px;
+
+            .img-overlay {
+                margin-bottom: 20px;
+
+                &::before {
+                    width: 320px;
+                    height: 191px;
+                }
+            }
+
+            .project-img {
+                width: 320px;
+                height: 191px;
+            }
+
+
+        }
+        .list-item:nth-child(odd) {
+            .img-overlay {
+                order: 1;
+                margin-right: 0px;
+            }
+
+
+            .project-info {
+                order: 2;
+            }
+        }
+    
+        .list-item:nth-child(even) {
+            .img-overlay {
+                order: 1;
+                margin-left: 0px;
+            }
+    
+            .project-info {
+                order: 2;
+            }
+        }
+    }
+}
+
+.project::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
 }
