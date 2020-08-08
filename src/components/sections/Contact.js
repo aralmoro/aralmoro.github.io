@@ -3,6 +3,7 @@ import Link from '../link/Link';
 import IconButton from '../buttons/IconButton';
 import MailIcon from '../../assets/icons/basic_mail.svg';
 import LinkedInIcon from '../../assets/icons/linked_in.svg';
+import GithubIcon from '../../assets/icons/github.svg';
 import SparkleEmoji from '../../assets/images/sparkle-emoji.png';
 import './Contact.scss';
 
@@ -10,7 +11,7 @@ function Contact() {
     return (
         <div className="contact">
             <div className="contact-content">
-                <h3>Let's get in touch! <img className="sparkle-emoji" src={SparkleEmoji} /> <br />You can reach me through:</h3>
+                <h3>Let's get in touch! <img className="sparkle-emoji" src={SparkleEmoji} /> <br />You can find me at:</h3>
                 <ul>
                     <li>
                         <IconButton icon={MailIcon} disabled size={28} />
@@ -19,6 +20,10 @@ function Contact() {
                     <li>
                         <IconButton icon={LinkedInIcon} disabled size={28} />
                         <Link title="LinkedIn" fontSize={17} href="https://www.linkedin.com/in/angela-roscel-almoro-26022287/" dark />
+                    </li>
+                    <li>
+                        <IconButton icon={GithubIcon} disabled size={28} />
+                        <Link title="GitHub" fontSize={17} href="https://github.com/aralmoro" dark />
                     </li>
                 </ul>
             </div>
