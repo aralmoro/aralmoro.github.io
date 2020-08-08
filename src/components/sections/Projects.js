@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import acIsland from '../../assets/images/ac-island.png';
 import './Projects.scss'
 
-function Projects() {
+function Projects(props) {
+    const { isActive } = props;
+
+    useEffect(() => {
+        if (isActive) {
+            const projectDiv = document.getElementsByClassName('project');
+            projectDiv[0].scrollTo(0, 0);
+        }
+    }, [isActive]);
+
     const projs = [
         { title: 'aralmoro portfolio', year: '2020', img: '', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus varius ante, sit amet molestie diam commodo eget. Donec dui ipsum, euismod vitae nibh vel, hendrerit lobortis eros. Quisque ut risus ut nulla ultrices feugiat. Nulla eu nunc eget dolor ullamcorper blandit vitae sit amet sem. Integer enim urna, pharetra sed magna id, egestas sodales purus. Proin convallis facilisis porttitor. Nam ante arcu, condimentum eget aliquam eu, hendrerit eu dui. ', tech: ['React', 'Webpack', 'Canvas'] },
         { title: '15 Puzzle', year: '2018', img: '', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus varius ante, sit amet molestie diam commodo eget. Donec dui ipsum, euismod vitae nibh vel, hendrerit lobortis eros. Quisque ut risus ut nulla ultrices feugiat. Nulla eu nunc eget dolor ullamcorper blandit vitae sit amet sem. Integer enim urna, pharetra sed magna id, egestas sodales purus. Proin convallis facilisis porttitor. Nam ante arcu, condimentum eget aliquam eu, hendrerit eu dui. ', tech: ['VanillaJS'] },
