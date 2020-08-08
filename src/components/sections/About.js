@@ -25,13 +25,9 @@ function About(props) {
                     <img className="about-photo" src={aboutPhoto} alt="my photo" />
                 </div>
                 <div className="about-description">
-                    <p>{`I'm Angela Roscel Almoro, a software engineer with 5 years of experience in the industry. I studied BS Computer Science in University of the Philippines Los Baños and graduated Cum Laude.`}</p>
+                    <p>I'm Angela Roscel Almoro, a software engineer with 5 years of experience in the industry. I studied BS Computer Science in University of the Philippines Los Baños and graduated Cum Laude. Someday, I want to create something using technology that will leave a significant impact in the world and will make it better.</p>
                     <br />
-                    <p>My ultimate career goal is to create something using technology that will leave a significant impact in the world and will make it better.</p>
-                    <br />
-                    <p>In my free time, I love watching KDramas, fulfilling my duties as Resident Representative in Animal Crossing and travelling in different countries.</p>
-                    <br />
-                    <p>Here are some of my favorite travel photos :) </p>
+                    <p>In my free time, I love watching KDramas, fulfilling my duties as Resident Representative in Animal Crossing and travelling in different countries. Here are some of my favorite travel photos :) </p>
                 </div>
             </div>
             <div className="about-additional-content">
