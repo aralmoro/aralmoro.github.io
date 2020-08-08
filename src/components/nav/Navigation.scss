@@ -49,7 +49,7 @@
             display: flex;
             padding: 1rem;
             flex-direction: column;
-            align-items: center;
+            justify-content: space-between;
             box-sizing: border-box;
 
             .close-btn-container {
@@ -60,9 +60,13 @@
                 justify-content: flex-end;
             }
 
+            .copyright {
+                font-size: 13px;
+                text-align: center;
+            }
+
             .navigation-list {
                 text-align: center;
-                margin-top: 100px;
     
                 li {
                     line-height: 4rem;

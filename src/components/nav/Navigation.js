@@ -35,6 +35,9 @@ function Navigation(props) {
                             })
                         }
                     </ul>
+                    <div className="copyright">
+                        © 2020 Angela Roscel Almoro
+                    </div>
                 </div>
             </nav>
         </div>
