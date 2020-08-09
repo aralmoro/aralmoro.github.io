@@ -65,40 +65,40 @@
                 margin-right: 30px;
             }
 
-            li:nth-child(1) {
-                transform: translateX(-20rem);
-                opacity: 0;
-                animation: moveInLeft 1s ease-out;
-                animation-fill-mode: forwards;
-            }
+            // li:nth-child(1) {
+            //     transform: translateX(-20rem);
+            //     opacity: 0;
+            //     animation: moveInLeft 1s ease-out;
+            //     animation-fill-mode: forwards;
+            // }
 
-            li:nth-child(2) {
-                transform: translateX(20rem);
-                opacity: 0;
-                animation: moveInRight 1s ease-out 0.5s;
-                animation-fill-mode: forwards;
-            }
+            // li:nth-child(2) {
+            //     transform: translateX(20rem);
+            //     opacity: 0;
+            //     animation: moveInRight 1s ease-out 0.5s;
+            //     animation-fill-mode: forwards;
+            // }
 
-            li:nth-child(3) {
-                transform: translateX(-20rem);
-                opacity: 0;
-                animation: moveInLeft 1s ease-out 1s;
-                animation-fill-mode: forwards;
-            }
+            // li:nth-child(3) {
+            //     transform: translateX(-20rem);
+            //     opacity: 0;
+            //     animation: moveInLeft 1s ease-out 1s;
+            //     animation-fill-mode: forwards;
+            // }
 
-            li:nth-child(4) {
-                transform: translateX(20rem);
-                opacity: 0;
-                animation: moveInRight 1s ease-out 1.5s;
-                animation-fill-mode: forwards;
-            }
+            // li:nth-child(4) {
+            //     transform: translateX(20rem);
+            //     opacity: 0;
+            //     animation: moveInRight 1s ease-out 1.5s;
+            //     animation-fill-mode: forwards;
+            // }
 
-            li:nth-child(5) {
-                transform: translateX(-20rem);
-                opacity: 0;
-                animation: moveInLeft 1s ease-out 2s;
-                animation-fill-mode: forwards;
-            }
+            // li:nth-child(5) {
+            //     transform: translateX(-20rem);
+            //     opacity: 0;
+            //     animation: moveInLeft 1s ease-out 2s;
+            //     animation-fill-mode: forwards;
+            // }
     
     
             li {

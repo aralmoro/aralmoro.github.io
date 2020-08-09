@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Fade from 'react-reveal/Fade';
 
 import samsungLogo from '../../assets/images/samsung-logo.png';
 import stratpointLogo from '../../assets/images/stratpoint-logo.png';
@@ -17,21 +18,23 @@ function WorkExperience(props) {
         }
     }, [isActive]);
 
-    const roleCard = (role) => {
+    const roleCard = (role, i) => {
         return (
-            <div className="work-item">
-                <div className="time">{role.time}</div>
-                <div className="title">{role.title}</div>
-                <div className="company">{role.company}</div>
-                <div>
-                    {
-                        role.tech.map(item => <span className="pill">{item}</span>)
-                    }
+            <Fade left={i % 2 === 0} right={i % 2 !== 0}>
+                <div className="work-item">
+                    <div className="time">{role.time}</div>
+                    <div className="title">{role.title}</div>
+                    <div className="company">{role.company}</div>
+                    <div>
+                        {
+                            role.tech.map(item => <span className="pill">{item}</span>)
+                        }
+                    </div>
+                    <div className="logo-container">
+                        <img className="logo" src={role.logo} alt="logo" />
+                    </div>
                 </div>
-                <div className="logo-container">
-                    <img className="logo" src={role.logo} alt="logo" />
-                </div>
-            </div>
+            </Fade>
         )
     }
 
@@ -48,9 +51,9 @@ function WorkExperience(props) {
             <div className="work-content">
                 <ul>
                     {
-                        roles.map(role => {
+                        roles.map((role, i) => {
                             return (
-                                <li>{roleCard(role)}</li>
+                                <li>{roleCard(role, i)}</li>
                             )
                         })
                     }
