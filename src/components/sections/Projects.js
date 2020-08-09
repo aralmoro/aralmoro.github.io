@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
 import acIsland from '../../assets/images/ac-island.png';
 import './Projects.scss'
 
@@ -20,23 +22,25 @@ function Projects(props) {
         { title: 'TouchDB', year: '2015', img: '', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus varius ante, sit amet molestie diam commodo eget. Donec dui ipsum, euismod vitae nibh vel, hendrerit lobortis eros. Quisque ut risus ut nulla ultrices feugiat. Nulla eu nunc eget dolor ullamcorper blandit vitae sit amet sem. Integer enim urna, pharetra sed magna id, egestas sodales purus. Proin convallis facilisis porttitor. Nam ante arcu, condimentum eget aliquam eu, hendrerit eu dui. ', tech: ['Android'] }
     ];
 
-    const renderItem = (item) => {
+    const renderItem = (item, i) => {
         return (
-            <div className="project-item">
-                <div className="img-overlay">
-                    <img className="project-img" src={acIsland} alt="project screenshot" />
-                </div>
-                <div className="project-info">
-                    <h2>{item.title}</h2>
-                    <p className="subtitle">{item.year}</p>
-                    <p>{item.description}</p>
-                    <div>
-                        {
-                            item.tech.map(item => <span className="pill">{item}</span>)
-                        }
+            <Fade left={i % 2 === 0} right={i % 2 !== 0}>
+                <div className="project-item">
+                    <div className="img-overlay">
+                        <img className="project-img" src={acIsland} alt="project screenshot" />
                     </div>
-                </div>
-            </div >
+                    <div className="project-info">
+                        <h2>{item.title}</h2>
+                        <p className="subtitle">{item.year}</p>
+                        <p>{item.description}</p>
+                        <div>
+                            {
+                                item.tech.map(item => <span className="pill">{item}</span>)
+                            }
+                        </div>
+                    </div>
+                </div >
+            </Fade>
         )
     };
 
@@ -44,11 +48,13 @@ function Projects(props) {
         <div className="project">
             {/* <img src={constructionIcon} attr="https://www.flaticon.com/authors/freepik" />
             Oops! This page is a work in progress */}
-            <p className="intro">While most of the projects I've worked on belong to companies I've worked with, <br />I'd like to share a few of the projects I developed in my free time. 👩‍💻 </p>
+            <Slide top>
+                <p className="intro">While most of the projects I've worked on belong to companies I've worked with, <br />I'd like to share a few of the projects I developed in my free time. 👩‍💻 </p>
+            </Slide>
             <ul className="project-list">
                 {
                     projs.map((item, i) => {
-                        return <li key={i} className="list-item">{renderItem(item)}</li>
+                        return <li key={i} className="list-item">{renderItem(item, i)}</li>
                     })
                 }
             </ul>
