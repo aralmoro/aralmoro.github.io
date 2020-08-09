@@ -42,8 +42,10 @@
         .project-img {
             width: 400px;
             height: 271px;
-            object-fit: cover;
+            object-fit: contain;
             border-radius: 25px;
+            background-color: #383838;
+            border: 1px solid lightgray;
         }
 
         .project-info {
@@ -77,6 +79,10 @@
     }
 
     .list-item:nth-child(odd) {
+        .project-item {
+            justify-content: flex-start;
+        }
+
         .img-overlay {
             order: 1;
             margin-right: 20px;
@@ -88,6 +94,10 @@
     }
 
     .list-item:nth-child(even) {
+        .project-item {
+            justify-content: flex-end;
+        }
+
         .img-overlay {
             order: 2;
             margin-left: 20px;
