@@ -19,7 +19,7 @@ function Projects(props) {
     }, [isActive]);
 
     const projs = [
-        { title: 'aralmoro portfolio', year: '2020', img: portfolio, description: 'A product of too much time in quarantine due to Covid-19. This website showcases my projects, work experiences and a little personal info for recruiters or anyone curious about me.', tech: ['React', 'Webpack', 'Canvas'] },
+        { title: 'my portfolio', year: '2020', img: portfolio, description: 'A product of too much time in quarantine due to Covid-19. This website showcases my projects, work experiences and a little personal info for recruiters or anyone curious about me.', tech: ['React', 'Webpack', 'Canvas'] },
         { title: 'Sliding Puzzle', year: '2018', img: puzzle, description: 'A simple sliding puzzle that consists numbered square titles in random order with 1 missing tile. The goal of the puzzle is to place the tiles in order by sliding the titles using the empty space. This game also has 8 and 15 puzzle mode.', tech: ['VanillaJS'] },
         { title: 'EE Quizzer', year: '2017', img: eeReviewer, description: 'An android application that contains lessons and quizzes about Electrical Engineering I made for EE friends.', tech: ['Android'] },
         { title: 'TouchDB', year: '2015', img: touchDB, description: 'The first ever Android application I created way back in college. This app aims to teach students the basics of database by visualizing database and interacting with it using touch gestures.', tech: ['Android'] }
