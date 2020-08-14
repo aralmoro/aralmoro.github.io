@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Slide from 'react-reveal/Slide';
 import Fade from 'react-reveal/Fade';
-import acIsland from '../../assets/images/ac-island.png';
 import portfolio from '../../assets/images/portfolio.png';
 import puzzle from '../../assets/images/puzzle.png';
 import touchDB from '../../assets/images/touchDB.png';

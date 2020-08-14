@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
 import aboutPhoto from '../../assets/images/angela.png';
-import acIsland from '../../assets/images/ac-island.png';
 import koreaPhoto from '../../assets/images/korea.png';
 import cambodiaPhoto from '../../assets/images/cambodia.png';
 import thailandPhoto from '../../assets/images/thailand.png';
 import taiwanPhoto from '../../assets/images/taiwan.png';
-import acLogo from '../../assets/images/animal-crossing-logo.jpg';
 import './About.scss';
 
 function About(props) {
