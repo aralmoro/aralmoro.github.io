@@ -18,10 +18,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpe?g|gif)$/i,
-                loader: "file-loader",
-                options: {
-                    publicPath: '/dist'
-                }
+                loader: "file-loader"
             },
             {
                 test: /\.svg$/,
@@ -39,7 +36,7 @@ module.exports = {
     resolve: { extensions: ["*", ".js", ".jsx"] },
     output: {
         path: path.resolve(__dirname, "dist/"),
-        publicPath: "/dist/",
+        publicPath: "dist/",
         filename: "bundle.js"
     },
     devServer: {
