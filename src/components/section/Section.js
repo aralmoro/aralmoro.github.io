@@ -29,8 +29,10 @@ function Section(props) {
             <div className="canvas-container">
                 <Background color1={color1} color2={color2} />
             </div>
-            <span className="section-title" style={{ textShadow: `-3px 2px ${computeShadowColor()}` }}>{name === "home" ? '' : name}</span>
-            {React.cloneElement(children, { isActive: isActive })}
+            <div className="section-content">
+                <span className="section-title" style={{ textShadow: `-3px 2px ${computeShadowColor()}` }}>{name === "home" ? '' : name}</span>
+                {React.cloneElement(children, { isActive: isActive })}
+            </div>
         </section >
 
     )
