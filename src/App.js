@@ -19,7 +19,7 @@ function App() {
         { index: 0, name: "home", content: <Banner />, color1: 149, color2: 197 },
         { index: 1, name: "projects", content: <Projects />, color1: 325, color2: 358 },
         { index: 2, name: "work", content: <WorkExperience />, color1: 214, color2: 250 },
-        { index: 3, name: "about me", content: <About />, color1: 21, color2: 46 },
+        { index: 3, name: "about meeeee", content: <About />, color1: 21, color2: 46 },
         { index: 4, name: "contact me", content: <Contact />, color1: 101, color2: 140 }
     ];
 
