@@ -72,7 +72,9 @@ function Background(props) {
         if (t < 1) {
             window.requestAnimationFrame(animate);
         } else {
-            setTimeout(animate, 33);
+            setTimeout(() => {
+                window.requestAnimationFrame(animate);
+            }, 33);
         }
     };
 
